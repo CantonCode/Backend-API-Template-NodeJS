@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
+const itemsService = require('../../services/item.service')
 
 
 router.get('/getAllItems', getAllItems);
