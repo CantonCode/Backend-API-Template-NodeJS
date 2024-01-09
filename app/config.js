@@ -10,6 +10,6 @@ const {
     } = process.env;
 
 module.exports ={
-        MONGO_URI: `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_CLUSTER}`
+        MONGO_URI: `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_CLUSTER}?retryWrites=true&w=majority&ssl=true`
 }
 //test

@@ -44,6 +44,7 @@ mongoose.connect(MONGO_URI,{
 // app.use('/jobs', require('./routes/job/job.controller'));
 // app.use('/api/jobs',jobRoutes);
 // app.use('/accounts', require('./routes/account/account.controller'));
+app.use('/items', require('./routes/item/item.controller'));
 app.use(errorHandler);
 
 app.listen(PORT,() => console.log('ruinning on port ' + PORT));
