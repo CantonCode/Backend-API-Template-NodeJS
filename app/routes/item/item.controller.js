@@ -6,7 +6,7 @@ const itemsService = require('../../services/item.service')
 
 /**
  * @openapi
- *  /getAllItems:
+ *  /items/getAllItems:
  *  get:
  *   tag:
  *     - GetAllItems       
