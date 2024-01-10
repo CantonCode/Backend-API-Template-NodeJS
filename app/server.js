@@ -47,6 +47,11 @@ mongoose.connect(MONGO_URI,{
 app.use('/items', require('./routes/item/item.controller'));
 app.use(errorHandler);
 
-swagger(app);
 
-app.listen(PORT,() => console.log('ruinning on port ' + PORT));
+
+app.listen(PORT,() => {
+    console.log('ruinning on port ' + PORT)
+    swagger(app);
+});
+    
+

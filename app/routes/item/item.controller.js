@@ -4,6 +4,13 @@ const router = express.Router();
 const Joi = require('joi');
 const itemsService = require('../../services/item.service')
 
+/**
+ * @openapi
+ *  /getAllItems:
+ *  get:
+ *   tag:
+ *     - GetAllItems       
+ */
 
 router.get('/getAllItems', getAllItems);
 router.post('/addItem',addItem);

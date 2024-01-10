@@ -2,8 +2,8 @@ const swaggerJsdoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 
 const options = {
-  swaggerDefinition: {
-    restapi: '3.0.0',
+  definition: {
+    openapi: '3.0.0',
     info: {
       title: 'NodeJS Starter API Template',
       version: '1.0.0',
@@ -15,7 +15,7 @@ const options = {
       },
     ],
   },
-  apis: ['./routes/*.js'],
+  apis: ["./routes/**/*.js"],
 }
 
 const specs = swaggerJsdoc(options)
