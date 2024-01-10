@@ -6,10 +6,18 @@ const itemsService = require('../../services/item.service')
 
 /**
  * @openapi
- *  /items/getAllItems:
+ *  '/items/getAllItems':
  *  get:
  *   tag:
- *     - GetAllItems       
+ *     - GetAllItems
+ *   summary: Gets all items in DB
+ *   description: returns all items
+ *   
+ *   responses:
+ *    200:
+ *      description: Fetched Successfully
+ *    400:
+ *      description: Bad Request
  */
 
 router.get('/getAllItems', getAllItems);
