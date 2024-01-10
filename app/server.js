@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { MONGO_URI } = require('./config');
 require("dotenv").config();
+const swaggerjsdoc = require("swagger-jsdoc");
+const swaggerui = require("swagger-ui-express")
  
 const app = express();
 
@@ -27,7 +29,6 @@ const PORT = process.env.NODE_DOCKER_PORT || 8080
 
 //BodyParser Middleware
 app.use(express.json());
-
 
 app.get('/',(req,res) => { 
     res.send("Hello from Node")
