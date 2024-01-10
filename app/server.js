@@ -2,8 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { MONGO_URI } = require('./config');
 require("dotenv").config();
-const swaggerjsdoc = require("swagger-jsdoc");
-const swaggerui = require("swagger-ui-express")
+const swagger = require('./swagger')
  
 const app = express();
 
@@ -47,5 +46,7 @@ mongoose.connect(MONGO_URI,{
 // app.use('/accounts', require('./routes/account/account.controller'));
 app.use('/items', require('./routes/item/item.controller'));
 app.use(errorHandler);
+
+swagger(app);
 
 app.listen(PORT,() => console.log('ruinning on port ' + PORT));
